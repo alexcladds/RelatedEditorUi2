@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="" ng-app="appRelatedEditor">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <title>Сопутствующие</title>
+    <link rel="shortcut icon" href="">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap-theme.min.css">
+    <link rel="stylesheet" href="/css/bootstrap-xtra.css">
+    <!--<link href="//maxcdn.bootstrapcdn.com/bootswatch/3.3.4/readable/bootstrap.min.css" rel="stylesheet">-->
+    <style>
+        body {
+            padding-top: 50px;
+        }
+        
+        .starter-template {
+            padding: 40px 15px;
+            text-align: center;
+        }
+    </style>
+
+    <!--[if IE]>
+<script src="https://cdn.jsdelivr.net/html5shiv/3.7.2/html5shiv.min.js"></script>
+<script src="https://cdn.jsdelivr.net/respond/1.4.2/respond.min.js"></script>
+<![endif]-->
+</head>
+
+<body>
+   
+   <div class="col-md-12">
+
+                <div class="panel panel-primary">
+                    <div class="panel-heading">
+                      
+                       <span class="glyphicon glyphicon-edit" aria-hidden="true"></span> 
+                        <b>Редактирование группы: Название группы</b>
+                    </div>
+                    <div class="panel-body">
+
+                        <div ng-controller="groupController">
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div>
+                                        <h4 class="media-heading">{{group.name}}</h4>
+                                        <strong>Тип группы:</strong> {{group.type}}
+                                        <br><strong>ID:</strong> {{group.id}}
+                                        <br><strong>Транзитная:</strong> {{group.isTransit}}
+                                        <br><strong>Последнее обновление:</strong> {{group.lastUpdate}}
+
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <a href="#">
+                                        <span class="glyphicon glyphicon-edit" aria-hidden="true"></span> Редактировать информацию
+                                    </a>
+                                    <br>
+                                    <a href="#">
+                                        <span class="glyphicon glyphicon-fullscreen" aria-hidden="true"></span> Открыть диаграмму
+                                    </a>
+                                    <br>
+                                    <a href="#">
+                                        <span class="glyphicon glyphicon-trash" aria-hidden="true"></span> Удалить группу
+                                    </a>
+
+                                </div>
+                            </div>
+                        </div>
+
+                        <div ng-controller="groupController">
+                            <h6 ng-repeat="item in content">
+                                {{item.name}}
+                            </h6> 
+                        </div>
+<hr>
+                        <div class="row">
+                           
+                            <div class="col-md-7">
+
+<h4>Выбор элемента:</h4>
+                        <div role="tabpanel">
+
+                            <!-- Nav tabs -->
+                            <ul class="nav nav-tabs" role="tablist">
+                                <li role="presentation" class="active"><a href="#groups" aria-controls="groups" role="tab" data-toggle="tab">Группы</a>
+                                </li>
+                                <li role="presentation"><a href="#classgroups" aria-controls="classgroups" role="tab" data-toggle="tab">Классификатор</a>
+                                </li>
+                                <li role="presentation"><a href="#products" aria-controls="products" role="tab" data-toggle="tab">Продукты</a>
+                                </li>
+                                <li role="presentation"><a href="#extra" aria-controls="extra" role="tab" data-toggle="tab">Дополнительно</a>
+                                </li>
+                            </ul>
+
+                            <!-- Tab panes -->
+                            <div class="tab-content">
+                                <div role="tabpanel" class="tab-pane active" id="groups">23452345</div>
+                                <div role="tabpanel" class="tab-pane" id="classgroups">...</div>
+                                <div role="tabpanel" class="tab-pane" id="products">...</div>
+                                <div role="tabpanel" class="tab-pane" id="extra">...</div>
+
+                    </div>
+                </div>
+                            </div>
+                            <div class="col-md-5">
+                            
+                            <div>
+                            
+                            <h4>В эту группу входят:</h4>
+                            <div style="width: 100%; height: 300px; overflow-y: scroll;">
+                                <table class="table table-condensed">
+                                    <thead>
+                                        <tr>
+                                            <th>
+                                                <input type="checkbox">
+                                            </th>
+                                            <th>Тип</th>
+                                            <th>Название</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>
+                                                <input type="checkbox">
+                                            </td>
+                                            <td>Группа КНС</td>
+                                            <td>Бинты</td>
+                                        </tr>
+                                        <tr class="warning">
+                                            <td>
+                                                <input type="checkbox">
+                                            </td>
+                                            <td>Продукт</td>
+                                            <td>Марля 50см Х 20 см</td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <input type="checkbox">
+                                            </td>
+                                            <td>Группа соп.</td>
+                                            <td>Марли</td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <input type="checkbox">
+                                            </td>
+                                            <td>Группа КНС</td>
+                                            <td>Бинты</td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <input type="checkbox">
+                                            </td>
+                                            <td>Продукт</td>
+                                            <td>Марля 50см Х 20 см</td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <input type="checkbox">
+                                            </td>
+                                            <td>Группа соп.</td>
+                                            <td>Марли</td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <input type="checkbox">
+                                            </td>
+                                            <td>Группа КНС</td>
+                                            <td>Бинты</td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <input type="checkbox">
+                                            </td>
+                                            <td>Продукт</td>
+                                            <td>Марля 50см Х 20 см</td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <input type="checkbox">
+                                            </td>
+                                            <td>Группа соп.</td>
+                                            <td>Марли</td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <input type="checkbox">
+                                            </td>
+                                            <td>Группа КНС</td>
+                                            <td>Бинты</td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <input type="checkbox">
+                                            </td>
+                                            <td>Продукт</td>
+                                            <td>Марля 50см Х 20 см</td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <input type="checkbox">
+                                            </td>
+                                            <td>Группа соп.</td>
+                                            <td>Марли</td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <input type="checkbox">
+                                            </td>
+                                            <td>Группа КНС</td>
+                                            <td>Бинты</td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <input type="checkbox">
+                                            </td>
+                                            <td>Продукт</td>
+                                            <td>Марля 50см Х 20 см</td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <input type="checkbox">
+                                            </td>
+                                            <td>Группа соп.</td>
+                                            <td>Марли</td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <input type="checkbox">
+                                            </td>
+                                            <td>Группа КНС</td>
+                                            <td>Бинты</td>
+                                        </tr>
+                                        <tr class="info">
+                                            <td>
+                                                <input type="checkbox">
+                                            </td>
+                                            <td>Продукт</td>
+                                            <td>Марля 50см Х 20 см</td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <input type="checkbox">
+                                            </td>
+                                            <td>Группа соп.</td>
+                                            <td>Марли</td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <input type="checkbox">
+                                            </td>
+                                            <td>Группа КНС</td>
+                                            <td>Бинты</td>
+                                        </tr>
+                                        <tr class="info">
+                                            <td>
+                                                <input type="checkbox">
+                                            </td>
+                                            <td>Продукт</td>
+                                            <td>Марля 50см Х 20 см</td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <input type="checkbox">
+                                            </td>
+                                            <td>Группа соп.</td>
+                                            <td>Марли</td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <input type="checkbox">
+                                            </td>
+                                            <td>Группа КНС</td>
+                                            <td>Бинты</td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <input type="checkbox">
+                                            </td>
+                                            <td>Продукт</td>
+                                            <td>Марля 50см Х 20 см</td>
+                                        </tr>
+                                        <tr class="danger">
+                                            <td>
+                                                <input type="checkbox">
+                                            </td>
+                                            <td>Группа соп.</td>
+                                            <td>Марли</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                            <div>
+                            </div>
+                        </div>
+                        
+                                <br>
+                                <div class="form-inline">
+                                    <div class="pull-left">
+                                        <div class="input-group">
+                                            <span class="input-group-addon" id="basic-addon1">
+                               <span class="glyphicon glyphicon-filter" aria-hidden="true"></span>
+                                            </span>
+                                            <input type="text" class="form-control" placeholder="Username" aria-describedby="basic-addon1">
+
+                                        </div>
+                                    </div>
+                                    <div class="pull-right">
+
+                                        <button type="button" class="btn btn-danger" data-toggle="dropdown" aria-expanded="false">
+                                            <span class="glyphicon glyphicon-remove" aria-hidden="true"></span> Удалить выбранное</button>
+                                    </div>
+
+
+
+                                </div>
+
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+    <script src="js/lib/angular.min.js"></script>
+    <script type="text/javascript">
+        
+        angular.module('appRelatedEditor', []);
+        
+    </script>
+
+
+    <script src="js/controllers/groupController.js"></script>
+</body>
+
+</html>
